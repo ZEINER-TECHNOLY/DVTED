@@ -6,14 +6,15 @@
     box-sizing: border-box;
 }
 
-html {
+html, body {
+    max-width: 100%;
     overflow-x: hidden;
 }
 
 body {
     overflow-x: hidden;
     font-family: system-ui;
-    background: center / cover no-repeat url("bg.jpeg")
+    background: center / cover no-repeat url("bg.jpeg");
 }
 
 .logoMenuLateral {
@@ -22,8 +23,8 @@ body {
 
 .main {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .divPrincipal {
@@ -144,10 +145,12 @@ header .bar {
 }
 
 @media screen and (max-width: 768px) {
-    html {
+
+    html, body {
+        max-width: 100%;
         overflow-x: hidden;
-    }
-    
+    }    
+
     body {
         overflow-x: hidden;
     }
