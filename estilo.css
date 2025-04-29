@@ -80,10 +80,11 @@ body {
 .secaoCards {
     top: 0;
     right: 0;
+    opacity: 0;
     width: 70vw;
     height: 100vh;
     padding: 2rem;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     position: absolute;
     background: #151515;
@@ -93,6 +94,8 @@ body {
 
 .secaoCards.mostraTela {
     transform: translateX(0%); 
+    display: flex;
+    opacity: 1;
 }
 
 .secaoCards .cardAutomoveis {
