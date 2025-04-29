@@ -1,0 +1,172 @@
+@charset "UTF-8";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    font-family: system-ui;
+    background: center / cover no-repeat url("bg.jpeg")
+}
+
+.logoMenuLateral {
+    width: 70px;
+}
+
+.main {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.divPrincipal {
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 1rem;
+    justify-content: space-between;
+    position: relative;
+}
+
+.divPrincipal .navLogo {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.menuLateral {
+    top: 0;
+    left: 0;
+    width: 30vw;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    height: 100vh;
+    background: black;
+    position: absolute;
+    flex-direction: column;
+    transition: all 2s ease .3s;
+    transform: translateX(-100%);
+}
+
+.menuLateral.mostraMenu {
+    transform: translateX(0%); 
+}
+
+.subMenu h1 {
+    color: #808080;
+}
+
+.subMenuFavoritos {
+    padding-top: 1rem;
+    border-top: 2px solid white;
+}
+
+.subMenu p {
+    font-weight: 600;
+    cursor: pointer;
+    padding-block: 1rem;
+}
+
+.secaoCards {
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: 100vh;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+    background: #151515;
+    transform: translateX(100%);
+    transition: all 1.5s ease .3s;
+}
+
+.secaoCards.mostraTela {
+    transform: translateX(0%); 
+}
+
+.secaoCards .cardAutomoveis {
+    width: 30%;
+    margin: 1rem;
+    padding: 1rem;
+    display: flex;
+    text-align: center;
+    color: white;
+    position: relative;
+    border-radius: 5px;
+    background: #212121;
+    flex-direction: column;
+    border: 2px solid #2E2C2C;
+    justify-content: space-between;
+}
+
+.secaoCards .cardAutomoveis h2 {
+    font-size: 14pt;
+    color: #40E194;
+}
+
+.CardAutomoveisEfeito {
+    top: -6%;
+    right: -5%;
+    border: 2px solid #2E2C2C;
+    padding: .5rem;
+    background: #212121;
+    position: absolute;
+    border-radius: 9999px;
+}
+
+.botaoFecharMobile {
+    display: none;
+}
+
+header {
+    display: flex;
+    width: 100vw;
+    background: black;
+    color: #40E194;
+    z-index: 100;
+    padding: .1rem 4rem;
+    justify-content: space-between;
+}
+
+header .bar {
+    font-size: 20pt;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+
+    .menuLateral {
+        width: 100vw;
+    }
+    .secaoCards {
+        width: 100vw;
+        height: max-content;;
+    }
+
+    .secaoCards .cardAutomoveis {
+        width: 100%;
+    }
+
+    .botaoFecharMobile {
+        display: flex; 
+        align-items: center;
+        margin-left: 2rem;
+        justify-content: center;
+    }
+
+    .botaoFecharMobile button {
+        background: transparent;
+        color: red;
+        padding: .5rem;
+        border-radius: 4px;
+        font-weight: 600;
+        border: 2px solid #2E2C2C;
+        font-family: Arial, system-ui;
+    }
+}
