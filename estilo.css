@@ -50,7 +50,7 @@ body {
     color: white;
     padding: 2rem;
     display: flex;
-    height: 100vh;
+    height: 100%;
     background: black;
     position: absolute;
     flex-direction: column;
@@ -82,7 +82,7 @@ body {
     right: 0;
     opacity: 0;
     width: 70vw;
-    height: 100vh;
+    height: max-content;
     padding: 2rem;
     display: none;
     flex-wrap: wrap;
@@ -121,11 +121,11 @@ body {
 .CardAutomoveisEfeito {
     top: -6%;
     right: -5%;
-    border: 2px solid #2E2C2C;
     padding: .5rem;
-    background: #212121;
     position: absolute;
+    background: #212121;
     border-radius: 9999px;
+    border: 2px solid #2E2C2C;
 }
 
 .botaoFecharMobile {
@@ -149,7 +149,6 @@ header .bar {
 }
 
 @media screen and (max-width: 768px) {
-
     html, body {
         max-width: 100%;
         overflow-x: hidden;
@@ -187,5 +186,39 @@ header .bar {
         font-weight: 600;
         border: 2px solid #2E2C2C;
         font-family: Arial, system-ui;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) { 
+    .secaoCards .cardAutomoveis {
+        width: 43%;
+    }
+
+    .secaoCards {
+        height: 100vh;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (min-width: 1025px) and (max-width: 1366px) {
+    
+    .secaoCards .cardAutomoveis {
+        width: 43%;
+    }
+
+    .secaoCards {
+        height: 100vh;
+        overflow-y: scroll;
+    }
+}
+
+@media screen and (min-width: 1367px) {
+    .secaoCards .cardAutomoveis {
+        width: 45%;
+    }
+
+    .secaoCards {
+        height: 100vh;
+        overflow-y: scroll;
     }
 }
