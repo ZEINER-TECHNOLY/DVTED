@@ -7,7 +7,7 @@
 }
 
 body {
-    overflow: hidden;
+    overflow-x: hidden;
     font-family: system-ui;
     background: center / cover no-repeat url("bg.jpeg")
 }
@@ -141,9 +141,14 @@ header .bar {
 
 @media screen and (max-width: 768px) {
 
+    body {
+        overflow-x: hidden;
+    }
+
     .menuLateral {
         width: 100vw;
     }
+    
     .secaoCards {
         width: 100vw;
         height: max-content;;
