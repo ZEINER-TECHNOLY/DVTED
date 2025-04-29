@@ -130,11 +130,12 @@ body {
 }
 
 header {
-    display: flex;
-    width: 100vw;
-    background: black;
-    color: #40E194;
     z-index: 100;
+    width: 100vw;
+    display: flex;
+    position: fixed;
+    color: #40E194;
+    background: black;
     padding: .1rem 2rem;
     justify-content: space-between;
 }
