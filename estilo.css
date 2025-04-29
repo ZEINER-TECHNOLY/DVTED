@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     overflow-x: hidden;
     font-family: system-ui;
@@ -140,7 +144,10 @@ header .bar {
 }
 
 @media screen and (max-width: 768px) {
-
+    html {
+        overflow-x: hidden;
+    }
+    
     body {
         overflow-x: hidden;
     }
@@ -148,7 +155,7 @@ header .bar {
     .menuLateral {
         width: 100vw;
     }
-    
+
     .secaoCards {
         width: 100vw;
         height: max-content;;
